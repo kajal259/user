@@ -1,0 +1,9 @@
+<%= form_with model: @book do |form| %>
+  <h1>book form:</h1>
+  <fieldset>
+    <%= yield form %>
+  </fieldset>
+  <p>
+    <%= form.submit "search" %>
+  </p>
+  <% end %> 
