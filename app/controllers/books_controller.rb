@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
     
-    @products = Product.all
+    # @products = Product.all
     # render inline: "<% @products.each do |p| %><p><%= p.name %></p><% end %>"
     # render json: @products
     # render layout: "special_layout"
@@ -44,7 +44,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to books_path, status: 301 
+       redirect_to books_path, status: 301 
       # redirect_back(fallback_location: root_path)
     else
       render :new
